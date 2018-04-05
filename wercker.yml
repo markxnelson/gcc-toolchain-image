@@ -4,7 +4,7 @@ box: centos
 
 build: 
   steps:
-    - source: 
+    - script: 
       code: |
         yum install -y make gcc binutils bison gdb automake
 
