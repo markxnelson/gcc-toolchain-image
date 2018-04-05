@@ -1,0 +1,17 @@
+# Create Docker image with GNU toolchain
+
+box: centos
+
+build: 
+  steps:
+    - source: 
+      code: |
+        yum install -y make gcc binutils bison gdb automake
+
+    - internal/docker-push:
+      username: $QUAY_USERNAME
+      password: $QUAY_PASSWORD
+      email: $QUAY_EMAIL
+      repository: quay.io/markxnelson/gnu-toolchain
+      tag: 1.0
+      cmd: "/bin/bash"
