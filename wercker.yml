@@ -6,7 +6,7 @@ build:
   steps:
     - script: 
       code: |
-        yum install -y make gcc binutils bison gdb automake
+        yum install -y make gcc binutils bison gdb automake gcc-g++
 
     - internal/docker-push:
       username: $QUAY_USERNAME
