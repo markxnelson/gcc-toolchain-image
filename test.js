@@ -1,2 +1,2 @@
-hello('disco')
-goodbye('nightclub')
+goodbye('disco')
+hello('nightclub')
